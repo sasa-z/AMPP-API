@@ -6,6 +6,7 @@ param($Request, $TriggerMetadata)
 $APIName = $TriggerMetadata.FunctionName
 Log-Request -user $request.headers.'x-ms-client-principal' -API $APINAME  -message "Accessed this API" -Sev "Debug"
 
+write-host $request
 write-host $request.query
 # Clear Cache
 if ($request.Query.ClearCache -eq "true") {
