@@ -20,7 +20,7 @@ if ($request.Query.ClearCache -eq "true") {
 }
 
 
-
+write-host $env:refreshtoken
 
 Push-OutputBinding -Name Response -Value ([HttpResponseContext]@{
         StatusCode = [HttpStatusCode]::OK
