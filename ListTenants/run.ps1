@@ -10,6 +10,7 @@ write-host $request
 write-host $request.query
 # Clear Cache
 if ($request.Query.ClearCache -eq "true") {
+write-host "Removing catche"
     Remove-CIPPCache
     $GraphRequest = [pscustomobject]@{"Results" = "Successfully completed request." }
     Push-OutputBinding -Name Response -Value ([HttpResponseContext]@{
