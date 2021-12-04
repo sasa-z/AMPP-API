@@ -20,7 +20,6 @@ if ($request.Query.ClearCache -eq "true") {
 }
 
 write-host "Gettings tenants"
-write-host $env:refreshtoken
 $Body = Get-Tenants
 $body
 
