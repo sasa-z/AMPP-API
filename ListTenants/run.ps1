@@ -18,6 +18,7 @@ if ($request.Query.ClearCache -eq "true") {
     exit
 }
 
+write-host "Gettings tenants"
 $Body = Get-Tenants
 
 
